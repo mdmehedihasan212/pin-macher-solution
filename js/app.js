@@ -14,4 +14,41 @@ function generatePin() {
     const pin = getPin();
     document.getElementById('input-pin').value = pin;
     console.log(pin);
+
 }
+
+// document.getElementById('number-value').addEventListener('click', function (event) {
+//     const number = event.target.innerText;
+//     const calcInput = document.getElementById('display-number');
+//     if (isNaN(number)) {
+//         if (number == 'C') {
+//             calcInput.value = '';
+//         }
+//     }
+//     else {
+//         const previousNumber = calcInput.value;
+//         const newNumber = previousNumber + number;
+//         calcInput.value = newNumber;
+//     }
+// });
+
+document.getElementById('number-value').addEventListener('click', function (event) {
+    const number = event.target.innerText;
+    const displayNumber = document.getElementById('display-number');
+    if (isNaN(number)) {
+        if (number == 'C')
+            return displayNumber.value = '';
+    }
+    else {
+        const previousNumber = displayNumber.value;
+        const newNumber = previousNumber + number;
+        displayNumber.value = newNumber;
+
+    }
+
+
+})
+
+
+
+
