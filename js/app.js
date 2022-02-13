@@ -36,10 +36,21 @@ document.getElementById('number-value').addEventListener('click', function (even
 function submitPin() {
     const generatePin = document.getElementById('input-pin').value;
     const inputPin = document.getElementById('display-number').value;
+
+    const notifySuccess = document.getElementById('notify-success');
+    const notifyFail = document.getElementById('notify-fail');
+
+
     if (generatePin == inputPin) {
-        console.log('true');
+        // console.log('true');
+        notifySuccess.style.display = 'block';
+        notifyFail.style.display = 'none';
+
     }
     else {
-        console.log('false');
+        // console.log('false');
+        notifySuccess.style.display = 'none';
+        notifyFail.style.display = 'block';
+
     }
 }
