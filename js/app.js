@@ -17,21 +17,6 @@ function generatePin() {
 
 }
 
-// document.getElementById('number-value').addEventListener('click', function (event) {
-//     const number = event.target.innerText;
-//     const calcInput = document.getElementById('display-number');
-//     if (isNaN(number)) {
-//         if (number == 'C') {
-//             calcInput.value = '';
-//         }
-//     }
-//     else {
-//         const previousNumber = calcInput.value;
-//         const newNumber = previousNumber + number;
-//         calcInput.value = newNumber;
-//     }
-// });
-
 document.getElementById('number-value').addEventListener('click', function (event) {
     const number = event.target.innerText;
     const displayNumber = document.getElementById('display-number');
@@ -46,9 +31,15 @@ document.getElementById('number-value').addEventListener('click', function (even
 
     }
 
-
 })
 
-
-
-
+function submitPin() {
+    const generatePin = document.getElementById('input-pin').value;
+    const inputPin = document.getElementById('display-number').value;
+    if (generatePin == inputPin) {
+        console.log('true');
+    }
+    else {
+        console.log('false');
+    }
+}
